@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Kup se SKUTER</title>
+        <meta name="description" content="The HTML5 Herald">
+        <meta name="author" content="SitePoint">
+
+        <script src="js/scripts.js"></script>
+
+        <link rel="stylesheet" href="/css/styles.css" type="text/css">
+</head>
+<body>
+    <div class="offer" v-for="d in results" >
+        <a v-bind:href='d.url'>
+          <p class="title">{{d.title}}</p>
+        </a>
+        <p class="date"
+           v-on:click="fetch(d)"
+           v-text="d.when"></p>
+        <div class="price"
+             v-text="d.price"></div>
+        <div class="location"
+             v-text="d.where"></div>
+
+        <ul width="250px">
+          <li v-for="(key, val) in d.details"
+              style="clear: both; width: 250px; float: left"
+              v-if="key != 'img' && key != 'desc'">
+            <strong>{{ key }}:</strong>
+            <span>{{ val }}</span>
+          </li>
+        </ul>
+
+        <img v-if="d.details" v-bind:src="d.details.img" />
+
+        <p v-if="d.details" v-text="d.details.desc"></p>
+    </div>
+</body>
+</html>

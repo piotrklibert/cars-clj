@@ -1,0 +1,47 @@
+body {
+    color: black;
+}
+
+.offer {
+	clear:both;
+	position: relative;
+	/* padding-left: 240px; */
+	min-height: 85px;
+	border: 2px white solid;
+	background-color: #F5F5F4;
+}
+
+
+.date, .price, .location {
+	margin-top: 13px;
+    float: left;
+    font-size: 1.2rem
+}
+
+.price {
+	background: yellow;
+	font-weight: bold;
+}
+
+.date {
+	font-weight: bold;
+	background-color: pink;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.title {
+	font-size: 1.4rem;
+}
+
+.location {
+	background-color: #B0E0E6;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.offer .desc { float: none }
+
+table {
+    clear: both;
+    float: none;
+}
